@@ -9,7 +9,7 @@ Install
 #### Cocoapods
 
 ``` ruby
-!use_frameworks
+use_frameworks!
 pod 'ALKit'
 ```
 
