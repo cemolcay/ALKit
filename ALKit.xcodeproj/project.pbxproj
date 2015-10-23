@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B277AEEC1BD9B5D90036AF3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277AEEB1BD9B5D90036AF3E /* AppDelegate.swift */; };
-		B277AEEE1BD9B5D90036AF3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277AEED1BD9B5D90036AF3E /* ViewController.swift */; };
-		B277AEF11BD9B5D90036AF3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B277AEEF1BD9B5D90036AF3E /* Main.storyboard */; };
-		B277AEF31BD9B5D90036AF3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B277AEF21BD9B5D90036AF3E /* Assets.xcassets */; };
-		B277AEF61BD9B5D90036AF3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B277AEF41BD9B5D90036AF3E /* LaunchScreen.storyboard */; };
 		B277AF011BD9B5D90036AF3E /* ALKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277AF001BD9B5D90036AF3E /* ALKitTests.swift */; };
 		B277AF0C1BD9B5D90036AF3E /* ALKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277AF0B1BD9B5D90036AF3E /* ALKitUITests.swift */; };
+		B277AF241BD9B60D0036AF3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277AF1B1BD9B60D0036AF3E /* ViewController.swift */; };
+		B277AF251BD9B60D0036AF3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277AF1D1BD9B60D0036AF3E /* AppDelegate.swift */; };
+		B277AF261BD9B60D0036AF3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B277AF1E1BD9B60D0036AF3E /* Assets.xcassets */; };
+		B277AF271BD9B60D0036AF3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B277AF1F1BD9B60D0036AF3E /* LaunchScreen.storyboard */; };
+		B277AF281BD9B60D0036AF3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B277AF211BD9B60D0036AF3E /* Main.storyboard */; };
+		B277AF291BD9B60D0036AF3E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B277AF231BD9B60D0036AF3E /* Info.plist */; };
+		B277AF2B1BD9B61B0036AF3E /* ALKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277AF2A1BD9B61B0036AF3E /* ALKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,18 +37,19 @@
 
 /* Begin PBXFileReference section */
 		B277AEE81BD9B5D90036AF3E /* ALKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B277AEEB1BD9B5D90036AF3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B277AEED1BD9B5D90036AF3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B277AEF01BD9B5D90036AF3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B277AEF21BD9B5D90036AF3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B277AEF51BD9B5D90036AF3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B277AEF71BD9B5D90036AF3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B277AEFC1BD9B5D90036AF3E /* ALKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B277AF001BD9B5D90036AF3E /* ALKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALKitTests.swift; sourceTree = "<group>"; };
 		B277AF021BD9B5D90036AF3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B277AF071BD9B5D90036AF3E /* ALKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B277AF0B1BD9B5D90036AF3E /* ALKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALKitUITests.swift; sourceTree = "<group>"; };
 		B277AF0D1BD9B5D90036AF3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B277AF1B1BD9B60D0036AF3E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B277AF1D1BD9B60D0036AF3E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B277AF1E1BD9B60D0036AF3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B277AF201BD9B60D0036AF3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B277AF221BD9B60D0036AF3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B277AF231BD9B60D0036AF3E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B277AF2A1BD9B61B0036AF3E /* ALKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +100,9 @@
 		B277AEEA1BD9B5D90036AF3E /* ALKit */ = {
 			isa = PBXGroup;
 			children = (
-				B277AEEB1BD9B5D90036AF3E /* AppDelegate.swift */,
-				B277AEED1BD9B5D90036AF3E /* ViewController.swift */,
-				B277AEEF1BD9B5D90036AF3E /* Main.storyboard */,
-				B277AEF21BD9B5D90036AF3E /* Assets.xcassets */,
-				B277AEF41BD9B5D90036AF3E /* LaunchScreen.storyboard */,
-				B277AEF71BD9B5D90036AF3E /* Info.plist */,
+				B277AF191BD9B60D0036AF3E /* ALKit */,
+				B277AF1A1BD9B60D0036AF3E /* Example */,
+				B277AF1C1BD9B60D0036AF3E /* Supporting Files */,
 			);
 			path = ALKit;
 			sourceTree = "<group>";
@@ -123,6 +123,34 @@
 				B277AF0D1BD9B5D90036AF3E /* Info.plist */,
 			);
 			path = ALKitUITests;
+			sourceTree = "<group>";
+		};
+		B277AF191BD9B60D0036AF3E /* ALKit */ = {
+			isa = PBXGroup;
+			children = (
+				B277AF2A1BD9B61B0036AF3E /* ALKit.swift */,
+			);
+			path = ALKit;
+			sourceTree = "<group>";
+		};
+		B277AF1A1BD9B60D0036AF3E /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				B277AF1B1BD9B60D0036AF3E /* ViewController.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		B277AF1C1BD9B60D0036AF3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B277AF1D1BD9B60D0036AF3E /* AppDelegate.swift */,
+				B277AF1E1BD9B60D0036AF3E /* Assets.xcassets */,
+				B277AF1F1BD9B60D0036AF3E /* LaunchScreen.storyboard */,
+				B277AF211BD9B60D0036AF3E /* Main.storyboard */,
+				B277AF231BD9B60D0036AF3E /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +221,7 @@
 				TargetAttributes = {
 					B277AEE71BD9B5D90036AF3E = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 9RP9MNMA7G;
 					};
 					B277AEFB1BD9B5D90036AF3E = {
 						CreatedOnToolsVersion = 7.1;
@@ -229,9 +258,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B277AEF61BD9B5D90036AF3E /* LaunchScreen.storyboard in Resources */,
-				B277AEF31BD9B5D90036AF3E /* Assets.xcassets in Resources */,
-				B277AEF11BD9B5D90036AF3E /* Main.storyboard in Resources */,
+				B277AF291BD9B60D0036AF3E /* Info.plist in Resources */,
+				B277AF281BD9B60D0036AF3E /* Main.storyboard in Resources */,
+				B277AF261BD9B60D0036AF3E /* Assets.xcassets in Resources */,
+				B277AF271BD9B60D0036AF3E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B277AEEE1BD9B5D90036AF3E /* ViewController.swift in Sources */,
-				B277AEEC1BD9B5D90036AF3E /* AppDelegate.swift in Sources */,
+				B277AF251BD9B60D0036AF3E /* AppDelegate.swift in Sources */,
+				B277AF241BD9B60D0036AF3E /* ViewController.swift in Sources */,
+				B277AF2B1BD9B61B0036AF3E /* ALKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,20 +324,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B277AEEF1BD9B5D90036AF3E /* Main.storyboard */ = {
+		B277AF1F1BD9B60D0036AF3E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B277AEF01BD9B5D90036AF3E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B277AEF41BD9B5D90036AF3E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B277AEF51BD9B5D90036AF3E /* Base */,
+				B277AF201BD9B60D0036AF3E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B277AF211BD9B60D0036AF3E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B277AF221BD9B60D0036AF3E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -399,7 +430,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ALKit/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/ALKit/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.prototapp.ALKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,7 +443,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ALKit/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/ALKit/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.prototapp.ALKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
