@@ -519,6 +519,7 @@
 				B277AF121BD9B5D90036AF3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B277AF131BD9B5D90036AF3E /* Build configuration list for PBXNativeTarget "ALKitTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +528,7 @@
 				B277AF151BD9B5D90036AF3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B277AF161BD9B5D90036AF3E /* Build configuration list for PBXNativeTarget "ALKitUITests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +537,7 @@
 				B277AF181BD9B5D90036AF3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

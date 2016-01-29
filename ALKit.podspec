@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ALKit"
-  s.version      = "0.1"
+  s.version      = "0.2"
   s.summary      = "Easy to use AutoLayout wrapper around `NSLayoutConstraints`."
 
   # This description is used to generate tags and improve search results.
@@ -229,7 +229,7 @@ func pinCenterY(toView view: UIView)
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/cemolcay/ALKit.git", :tag => "v0.1" }
+  s.source       = { :git => "https://github.com/cemolcay/ALKit.git", :tag => "v0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
