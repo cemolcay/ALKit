@@ -6,7 +6,7 @@ Easy to use AutoLayout wrapper around `NSLayoutConstraints`.
 Install
 ----
 
-#### Cocoapods
+#### CocoaPods
 
 ``` ruby
 use_frameworks!
