@@ -17,7 +17,7 @@ pod 'ALKit'
 
 Copy the `ALKit` folder into your project
 
-Documentation
+Usage
 ----
 
 ### Init
