@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ALKit"
-  s.version      = "0.3"
+  s.version      = "0.4"
   s.summary      = "Easy to use AutoLayout wrapper around `NSLayoutConstraints`."
 
   # This description is used to generate tags and improve search results.
@@ -73,13 +73,14 @@ The main function of all kit.
 Wraps `addConstraint:` method of autolayout.
 
 ``` swift
-func pin(
-inView inView: UIView? = nil,
+public func pin(
 edge: NSLayoutAttribute,
 toEdge: NSLayoutAttribute,
 ofView: UIView?,
 withInset: CGFloat = 0) {
-let view = inView ?? ofView ?? self
+guard let view = superview else {
+return assertionFailure("view must be added as subview in view hierarchy")
+}
 view.addConstraint(NSLayoutConstraint(
 item: self,
 attribute: edge,
@@ -91,94 +92,48 @@ constant: withInset))
 }
 ```
 
-### Pin
-
-Pins the same edges.
-
-``` swift
-func pinRight(inView inView: UIView? = nil, toView: UIView, withInset: CGFloat = 0)
 ```
 
-``` swift
-func pinLeft(inView inView: UIView? = nil, toView: UIView, withInset: CGFloat = 0)
+override func viewDidLoad() {
+super.viewDidLoad()
+
+// setup views
+
+let box = UIView.AutoLayout()
+box.backgroundColor = UIColor.greenColor()
+view.addSubview(box)
+
+let blue = UIView.AutoLayout()
+blue.backgroundColor = UIColor.blueColor()
+box.addSubview(blue)
+
+let red = UIView.AutoLayout()
+red.backgroundColor = UIColor.redColor()
+box.addSubview(red)
+
+let yellow = UIView.AutoLayout()
+yellow.backgroundColor = UIColor.yellowColor()
+box.addSubview(yellow)
+
+// setup constraints
+
+box.fill(toView: view)
+
+blue.pinTop(toView: box, withInset: 10)
+blue.fillHorizontal(toView: box, withInset: 10)
+blue.pinHeight(90)
+
+red.pinBottom(toView: box, withInset: 10)
+red.fillHorizontal(toView: box, withInset: 10)
+red.pinHeight(90)
+
+yellow.pinToTop(ofView: red, withOffset: 10)
+yellow.pinCenterX(toView: red)
+yellow.pinSize(width: 50, height: 50)
+}
+
 ```
-
-``` swift
-func pinTop(inView inView: UIView? = nil, toView: UIView, withInset: CGFloat = 0)
-```
-
-``` swift
-func pinBottom(inView inView: UIView? = nil, toView: UIView, withInset: CGFloat = 0)
-```
-
-### Pin To
-
-Pins the opposite edeges.
-
-``` swift
-func pinToRight(inView inView: UIView? = nil, toView: UIView, withOffset: CGFloat = 0)
-```
-
-``` swift
-func pinToLeft(inView inView: UIView? = nil, toView: UIView, withOffset: CGFloat = 0)
-```
-
-``` swift
-func pinToTop(inView inView: UIView? = nil, toView: UIView, withOffset: CGFloat = 0)
-```
-
-``` swift
-func pinToBottom(inView inView: UIView? = nil, toView: UIView, withOffset: CGFloat = 0)
-```
-
-### Fill
-
-Fills in view horizontally, vertically or both.
-
-``` swift
-func fill(toView view: UIView, withInset: UIEdgeInsets = UIEdgeInsetsZero)
-```
-
-``` swift
-func fillHorizontal(toView view: UIView, withInset: CGFloat = 0)
-```
-
-``` swift
-func fillVertical(toView view: UIView, withInset: CGFloat = 0)
-```
-
-### Size
-
-Sets the size by width, height or both.
-
-``` swift
-func pinSize(width width: CGFloat, height: CGFloat)
-```
-
-``` swift
-func pinWidht(width: CGFloat)
-```
-
-``` swift
-func pinHeight(height: CGFloat)
-```
-
-### Center
-
-Centers horizontally, vertically or both.
-
-``` swift
-func pinCenter(toView view: UIView)
-```
-
-``` swift
-func pinCenterX(toView view: UIView)
-```
-
-``` swift
-func pinCenterY(toView view: UIView)
-```
-                   DESC
+DESC
 
   s.homepage     = "https://github.com/cemolcay/ALKit"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -229,7 +184,7 @@ func pinCenterY(toView view: UIView)
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/cemolcay/ALKit.git", :tag => "v0.3" }
+  s.source       = { :git => "https://github.com/cemolcay/ALKit.git", :tag => "v0.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
