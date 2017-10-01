@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ALKit"
-  s.version      = "0.4"
+  s.version      = "0.5"
   s.summary      = "Easy to use AutoLayout wrapper around `NSLayoutConstraints`."
 
   # This description is used to generate tags and improve search results.
@@ -30,13 +30,20 @@ ALKit
 
 Easy to use AutoLayout wrapper around `NSLayoutConstraints`.
 
+Requirements
+---
+
+- Swift 3.0+
+- iOS 8.0+
+- tvOS 9.0+
+
 Install
 ----
 
-#### Cocoapods
+#### CocoaPods
 
 ``` ruby
-!use_frameworks
+use_frameworks!
 pod 'ALKit'
 ```
 
@@ -44,28 +51,13 @@ pod 'ALKit'
 
 Copy the `ALKit` folder into your project
 
-Documentation
+Usage
 ----
 
 ### Init
 
-Initialzes autolayout ready views.
-
-
-``` swift
-convenience init (withAutolayout: Bool) {
-self.init(frame: CGRect.zero)
-translatesAutoresizingMaskIntoConstraints = false
-}
-```
-
-``` swift
-class func AutoLayout() -> UIView {
-let view = UIView(frame: CGRect.zero)
-view.translatesAutoresizingMaskIntoConstraints = false
-return view
-}
-```
+Create `UIView` instances from either storyboard or programmatically.
+Don't forget to set `view.translatesAutoresizingMaskIntoConstraints = false` if you are creating them programmatically.
 
 ### Wraper
 
@@ -73,14 +65,13 @@ The main function of all kit.
 Wraps `addConstraint:` method of autolayout.
 
 ``` swift
-public func pin(
+func pin(
+inView inView: UIView? = nil,
 edge: NSLayoutAttribute,
 toEdge: NSLayoutAttribute,
 ofView: UIView?,
 withInset: CGFloat = 0) {
-guard let view = superview else {
-return assertionFailure("view must be added as subview in view hierarchy")
-}
+let view = inView ?? ofView ?? self
 view.addConstraint(NSLayoutConstraint(
 item: self,
 attribute: edge,
@@ -92,31 +83,9 @@ constant: withInset))
 }
 ```
 
-```
+#### Example
 
-override func viewDidLoad() {
-super.viewDidLoad()
-
-// setup views
-
-let box = UIView.AutoLayout()
-box.backgroundColor = UIColor.greenColor()
-view.addSubview(box)
-
-let blue = UIView.AutoLayout()
-blue.backgroundColor = UIColor.blueColor()
-box.addSubview(blue)
-
-let red = UIView.AutoLayout()
-red.backgroundColor = UIColor.redColor()
-box.addSubview(red)
-
-let yellow = UIView.AutoLayout()
-yellow.backgroundColor = UIColor.yellowColor()
-box.addSubview(yellow)
-
-// setup constraints
-
+``` swift
 box.fill(toView: view)
 
 blue.pinTop(toView: box, withInset: 10)
@@ -130,9 +99,12 @@ red.pinHeight(90)
 yellow.pinToTop(ofView: red, withOffset: 10)
 yellow.pinCenterX(toView: red)
 yellow.pinSize(width: 50, height: 50)
-}
-
 ```
+
+That would be look like this:
+
+![alt tag](https://github.com/cemolcay/ALKit/blob/master/demo.png?raw=true)
+
 DESC
 
   s.homepage     = "https://github.com/cemolcay/ALKit"
@@ -184,7 +156,7 @@ DESC
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/cemolcay/ALKit.git", :tag => "v0.4" }
+  s.source       = { :git => "https://github.com/cemolcay/ALKit.git", :tag => "0.5" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

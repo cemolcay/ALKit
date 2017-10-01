@@ -12,8 +12,8 @@ import UIKit
 
 public extension UIEdgeInsets {
 
-  /// Equal insets for all edges
-  public init (inset: CGFloat) {
+  /// Equal insets for all edges.
+  public init(inset: CGFloat) {
     top = inset
     bottom = inset
     left = inset
@@ -23,17 +23,13 @@ public extension UIEdgeInsets {
 
 public extension UIView{
 
-  public convenience init (withAutolayout: Bool) {
-    self.init(frame: CGRect.zero)
-    translatesAutoresizingMaskIntoConstraints = false
-  }
-
-  public class func AutoLayout() -> UIView {
-    let view = UIView(frame: CGRect.zero)
-    view.translatesAutoresizingMaskIntoConstraints = false
-    return view
-  }
-
+  /// Auto layout wrapper function to pin a view's edge to another view's edge.
+  ///
+  /// - Parameters:
+  ///   - edge: View's edge is going to be pinned.
+  ///   - toEdge: Pinning edge of other view.
+  ///   - ofView: The view to be pinned.
+  ///   - withInset: Space between pinning edges.
   public func pin(
     edge: NSLayoutAttribute,
     toEdge: NSLayoutAttribute,
@@ -45,7 +41,7 @@ public extension UIView{
       view.addConstraint(NSLayoutConstraint(
         item: self,
         attribute: edge,
-        relatedBy: .Equal,
+        relatedBy: .equal,
         toItem: ofView,
         attribute: toEdge,
         multiplier: 1,
@@ -54,86 +50,161 @@ public extension UIView{
 
   // MARK: Pin Super
 
-  public func pinRight(toView toView: UIView, withInset: CGFloat = 0) {
-    pin(.Right, toEdge: .Right, ofView: toView, withInset: -withInset)
+  /// Pins right edge of view to other view's right edge.
+  ///
+  /// - Parameters:
+  ///   - view: The view going to be pinned.
+  ///   - inset: Space between edges.
+  public func pinRight(to view: UIView, inset: CGFloat = 0) {
+    pin(edge: .right, toEdge: .right, ofView: view, withInset: -inset)
   }
 
-  public func pinLeft(toView toView: UIView, withInset: CGFloat = 0) {
-    pin(.Left, toEdge: .Left, ofView: toView, withInset: withInset)
+  /// Pins left edge of view to other view's left edge.
+  ///
+  /// - Parameters:
+  ///   - view: The view going to be pinned.
+  ///   - inset: Space between edges.
+  public func pinLeft(to view: UIView, inset: CGFloat = 0) {
+    pin(edge: .left, toEdge: .left, ofView: view, withInset: inset)
   }
 
-  public func pinTop(toView toView: UIView, withInset: CGFloat = 0) {
-    pin(.Top, toEdge: .Top, ofView: toView, withInset: withInset)
+  /// Pins top edge of view to other view's top edge.
+  ///
+  /// - Parameters:
+  ///   - view: The view going to be pinned.
+  ///   - inset: Space between edges.
+  public func pinTop(to view: UIView, inset: CGFloat = 0) {
+    pin(edge: .top, toEdge: .top, ofView: view, withInset: inset)
   }
 
-  public func pinBottom(toView toView: UIView, withInset: CGFloat = 0) {
-    pin(.Bottom, toEdge: .Bottom, ofView: toView, withInset: -withInset)
+  /// Pins bottom edge of view to other view's bottom edge.
+  ///
+  /// - Parameters:
+  ///   - view: The view going to be pinned.
+  ///   - inset: Space between edges.
+  public func pinBottom(to view: UIView, inset: CGFloat = 0) {
+    pin(edge: .bottom, toEdge: .bottom, ofView: view, withInset: -inset)
   }
 
   // MARK: Pin To Another View In Super
 
-  public func pinToRight(ofView ofView: UIView, withOffset: CGFloat = 0) {
-    pin(.Left, toEdge: .Right, ofView: ofView, withInset: withOffset)
+  /// Pins left edge of view to other view's right edge.
+  ///
+  /// - Parameters:
+  ///   - view: The view going to be pinned.
+  ///   - inset: Space between edges.
+  public func pinToRight(of view: UIView, offset: CGFloat = 0) {
+    pin(edge: .left, toEdge: .right, ofView: view, withInset: offset)
   }
 
-  public func pinToLeft(ofView ofView: UIView, withOffset: CGFloat = 0) {
-    pin(.Right, toEdge: .Left, ofView: ofView, withInset: -withOffset)
+  /// Pins right edge of view to other view's left edge.
+  ///
+  /// - Parameters:
+  ///   - view: The view going to be pinned.
+  ///   - inset: Space between edges.
+  public func pinToLeft(of view: UIView, offset: CGFloat = 0) {
+    pin(edge: .right, toEdge: .left, ofView: view, withInset: -offset)
   }
 
-  public func pinToTop(ofView ofView: UIView, withOffset: CGFloat = 0) {
-    pin(.Bottom, toEdge: .Top, ofView: ofView, withInset: -withOffset)
+  /// Pins bottom edge of view to other view's top edge.
+  ///
+  /// - Parameters:
+  ///   - view: The view going to be pinned.
+  ///   - inset: Space between edges.
+  public func pinToTop(of view: UIView, offset: CGFloat = 0) {
+    pin(edge: .bottom, toEdge: .top, ofView: view, withInset: -offset)
   }
 
-  public func pinToBottom(ofView ofView: UIView, withOffset: CGFloat = 0) {
-    pin(.Top, toEdge: .Bottom, ofView: ofView, withInset: withOffset)
+  /// Pins top edge of view to other view's bottom edge.
+  ///
+  /// - Parameters:
+  ///   - view: The view going to be pinned.
+  ///   - inset: Space between edges.
+  public func pinToBottom(of view: UIView, offset: CGFloat = 0) {
+    pin(edge: .top, toEdge: .bottom, ofView: view, withInset: offset)
   }
 
   // MARK: Fill In Super
 
-  public func fill(toView view: UIView, withInset: UIEdgeInsets = UIEdgeInsetsZero) {
-    pinLeft(toView: view, withInset: withInset.left)
-    pinRight(toView: view, withInset: withInset.right)
-    pinTop(toView: view, withInset: withInset.top)
-    pinBottom(toView: view, withInset: withInset.bottom)
+  /// Pins all edges of the view to other view's edges with insets.
+  ///
+  /// - Parameters:
+  ///   - view: The view is going to be pinned.
+  ///   - insets: Spaces between edges.
+  public func fill(to view: UIView, insets: UIEdgeInsets = .zero) {
+    pinLeft(to: view, inset: insets.left)
+    pinRight(to: view, inset: insets.right)
+    pinTop(to: view, inset: insets.top)
+    pinBottom(to: view, inset: insets.bottom)
   }
 
-  public func fillHorizontal(toView view: UIView, withInset: CGFloat = 0) {
-    pinRight(toView: view, withInset: withInset)
-    pinLeft(toView: view, withInset: withInset)
+  /// Pins left and right edges of the view to other view's left and right edges with equal insets.
+  ///
+  /// - Parameters:
+  ///   - view: The view is going to be pinned.
+  ///   - insets: Equal insets between left and right edges.
+  public func fillHorizontal(to view: UIView, insets: CGFloat = 0) {
+    pinRight(to: view, inset: insets)
+    pinLeft(to: view, inset: insets)
   }
 
-  public func fillVertical(toView view: UIView, withInset: CGFloat = 0) {
-    pinTop(toView: view, withInset: withInset)
-    pinBottom(toView: view, withInset: withInset)
+  /// Pins top and bottom edges of the view to other view's top and bottom edges with equal insets.
+  ///
+  /// - Parameters:
+  ///   - view: The view is going to be pinned.
+  ///   - insets: Equal insets between top and bottom edges.
+  public func fillVertical(to view: UIView, insets: CGFloat = 0) {
+    pinTop(to: view, inset: insets)
+    pinBottom(to: view, inset: insets)
   }
 
   // MARK: Size
 
-  public func pinSize(width width: CGFloat, height: CGFloat) {
-    pinWidth(width)
-    pinHeight(height)
+  /// Pins width and height of the view to constant width and height values.
+  ///
+  /// - Parameters:
+  ///   - width: Width constant.
+  ///   - height: Height constant.
+  public func pinSize(width: CGFloat, height: CGFloat) {
+    pinWidth(width: width)
+    pinHeight(height: height)
   }
 
+  /// Pins width of the view to constant width value.
+  ///
+  /// - Parameter width: Width constant.
   public func pinWidth(width: CGFloat) {
-    pin(.Width, toEdge: .NotAnAttribute, ofView: nil, withInset: width)
+    pin(edge: .width, toEdge: .notAnAttribute, ofView: nil, withInset: width)
   }
 
+  /// Pins height of the view to constant width value.
+  ///
+  /// - Parameter height: Height constant.
   public func pinHeight(height: CGFloat) {
-    pin(.Height, toEdge: .NotAnAttribute, ofView: nil, withInset: height)
+    pin(edge: .height, toEdge: .notAnAttribute, ofView: nil, withInset: height)
   }
 
   // MARK: Center
 
-  public func pinCenter(toView view: UIView) {
-    pinCenterX(toView: view)
-    pinCenterY(toView: view)
+  /// Pins center of the view to other view's center.
+  ///
+  /// - Parameter view: The view is going to be pinned.
+  public func pinCenter(to view: UIView) {
+    pinCenterX(to: view)
+    pinCenterY(to: view)
   }
 
-  public func pinCenterX(toView view: UIView) {
-    pin(.CenterX, toEdge: .CenterX, ofView: view)
+  /// Pins horizontally center the view to other view's center.
+  ///
+  /// - Parameter view: The view is going to be pinned.
+  public func pinCenterX(to view: UIView) {
+    pin(edge: .centerX, toEdge: .centerX, ofView: view)
   }
 
-  public func pinCenterY(toView view: UIView) {
-    pin(.CenterY, toEdge: .CenterY, ofView: view)
+  /// Pins vertically center of the view to other view's center.
+  ///
+  /// - Parameter view: The view is going to be pinned.
+  public func pinCenterY(to view: UIView) {
+    pin(edge: .centerY, toEdge: .centerY, ofView: view)
   }
 }

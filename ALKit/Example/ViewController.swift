@@ -15,36 +15,40 @@ class ViewController: UIViewController {
 
     // setup views
 
-    let box = UIView.AutoLayout()
-    box.backgroundColor = UIColor.greenColor()
+    let box = UIView()
+    box.translatesAutoresizingMaskIntoConstraints = false
+    box.backgroundColor = .green
     view.addSubview(box)
 
-    let blue = UIView.AutoLayout()
-    blue.backgroundColor = UIColor.blueColor()
+    let blue = UIView()
+    blue.translatesAutoresizingMaskIntoConstraints = false
+    blue.backgroundColor = .blue
     box.addSubview(blue)
 
-    let red = UIView.AutoLayout()
-    red.backgroundColor = UIColor.redColor()
+    let red = UIView()
+    red.translatesAutoresizingMaskIntoConstraints = false
+    red.backgroundColor = .red
     box.addSubview(red)
 
-    let yellow = UIView.AutoLayout()
-    yellow.backgroundColor = UIColor.yellowColor()
+    let yellow = UIView()
+    yellow.translatesAutoresizingMaskIntoConstraints = false
+    yellow.backgroundColor = .yellow
     box.addSubview(yellow)
 
     // setup constraints
 
-    box.fill(toView: view)
+    box.fill(to: view)
 
-    blue.pinTop(toView: box, withInset: 10)
-    blue.fillHorizontal(toView: box, withInset: 10)
-    blue.pinHeight(90)
+    blue.pinTop(to: box, inset: 10)
+    blue.fillHorizontal(to: box, insets: 10)
+    blue.pinHeight(height: 90)
 
-    red.pinBottom(toView: box, withInset: 10)
-    red.fillHorizontal(toView: box, withInset: 10)
-    red.pinHeight(90)
+    red.pinBottom(to: box, inset: 10)
+    red.fillHorizontal(to: box, insets: 10)
+    red.pinHeight(height: 90)
 
-    yellow.pinToTop(ofView: red, withOffset: 10)
-    yellow.pinCenterX(toView: red)
+    yellow.pinToTop(of: red, offset: 10)
+    yellow.pinCenterX(to: red)
     yellow.pinSize(width: 50, height: 50)
   }
 }
