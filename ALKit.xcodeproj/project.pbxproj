@@ -7,66 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B277AF011BD9B5D90036AF3E /* ALKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277AF001BD9B5D90036AF3E /* ALKitTests.swift */; };
-		B277AF0C1BD9B5D90036AF3E /* ALKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277AF0B1BD9B5D90036AF3E /* ALKitUITests.swift */; };
-		B277AF241BD9B60D0036AF3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277AF1B1BD9B60D0036AF3E /* ViewController.swift */; };
+		B2411652216393C100EED3E9 /* ALKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2411651216393C100EED3E9 /* ALKit.swift */; };
+		B2411654216393D600EED3E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2411653216393D600EED3E9 /* ViewController.swift */; };
 		B277AF251BD9B60D0036AF3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277AF1D1BD9B60D0036AF3E /* AppDelegate.swift */; };
 		B277AF261BD9B60D0036AF3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B277AF1E1BD9B60D0036AF3E /* Assets.xcassets */; };
 		B277AF271BD9B60D0036AF3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B277AF1F1BD9B60D0036AF3E /* LaunchScreen.storyboard */; };
 		B277AF281BD9B60D0036AF3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B277AF211BD9B60D0036AF3E /* Main.storyboard */; };
-		B277AF2B1BD9B61B0036AF3E /* ALKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277AF2A1BD9B61B0036AF3E /* ALKit.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B277AEFD1BD9B5D90036AF3E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B277AEE01BD9B5D90036AF3E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B277AEE71BD9B5D90036AF3E;
-			remoteInfo = ALKit;
-		};
-		B277AF081BD9B5D90036AF3E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B277AEE01BD9B5D90036AF3E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B277AEE71BD9B5D90036AF3E;
-			remoteInfo = ALKit;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		B2411651216393C100EED3E9 /* ALKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALKit.swift; sourceTree = "<group>"; };
+		B2411653216393D600EED3E9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B277AEE81BD9B5D90036AF3E /* ALKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B277AEFC1BD9B5D90036AF3E /* ALKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B277AF001BD9B5D90036AF3E /* ALKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALKitTests.swift; sourceTree = "<group>"; };
-		B277AF021BD9B5D90036AF3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B277AF071BD9B5D90036AF3E /* ALKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B277AF0B1BD9B5D90036AF3E /* ALKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALKitUITests.swift; sourceTree = "<group>"; };
-		B277AF0D1BD9B5D90036AF3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B277AF1B1BD9B60D0036AF3E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B277AF1D1BD9B60D0036AF3E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B277AF1E1BD9B60D0036AF3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B277AF201BD9B60D0036AF3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B277AF221BD9B60D0036AF3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B277AF231BD9B60D0036AF3E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B277AF2A1BD9B61B0036AF3E /* ALKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B277AEE51BD9B5D90036AF3E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B277AEF91BD9B5D90036AF3E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B277AF041BD9B5D90036AF3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,8 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				B277AEEA1BD9B5D90036AF3E /* ALKit */,
-				B277AEFF1BD9B5D90036AF3E /* ALKitTests */,
-				B277AF0A1BD9B5D90036AF3E /* ALKitUITests */,
 				B277AEE91BD9B5D90036AF3E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,8 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				B277AEE81BD9B5D90036AF3E /* ALKit.app */,
-				B277AEFC1BD9B5D90036AF3E /* ALKitTests.xctest */,
-				B277AF071BD9B5D90036AF3E /* ALKitUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,45 +56,11 @@
 		B277AEEA1BD9B5D90036AF3E /* ALKit */ = {
 			isa = PBXGroup;
 			children = (
-				B277AF191BD9B60D0036AF3E /* ALKit */,
-				B277AF1A1BD9B60D0036AF3E /* Example */,
+				B2411651216393C100EED3E9 /* ALKit.swift */,
+				B2411653216393D600EED3E9 /* ViewController.swift */,
 				B277AF1C1BD9B60D0036AF3E /* Supporting Files */,
 			);
 			path = ALKit;
-			sourceTree = "<group>";
-		};
-		B277AEFF1BD9B5D90036AF3E /* ALKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				B277AF001BD9B5D90036AF3E /* ALKitTests.swift */,
-				B277AF021BD9B5D90036AF3E /* Info.plist */,
-			);
-			path = ALKitTests;
-			sourceTree = "<group>";
-		};
-		B277AF0A1BD9B5D90036AF3E /* ALKitUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B277AF0B1BD9B5D90036AF3E /* ALKitUITests.swift */,
-				B277AF0D1BD9B5D90036AF3E /* Info.plist */,
-			);
-			path = ALKitUITests;
-			sourceTree = "<group>";
-		};
-		B277AF191BD9B60D0036AF3E /* ALKit */ = {
-			isa = PBXGroup;
-			children = (
-				B277AF2A1BD9B61B0036AF3E /* ALKit.swift */,
-			);
-			path = ALKit;
-			sourceTree = "<group>";
-		};
-		B277AF1A1BD9B60D0036AF3E /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				B277AF1B1BD9B60D0036AF3E /* ViewController.swift */,
-			);
-			path = Example;
 			sourceTree = "<group>";
 		};
 		B277AF1C1BD9B60D0036AF3E /* Supporting Files */ = {
@@ -172,42 +95,6 @@
 			productReference = B277AEE81BD9B5D90036AF3E /* ALKit.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B277AEFB1BD9B5D90036AF3E /* ALKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B277AF131BD9B5D90036AF3E /* Build configuration list for PBXNativeTarget "ALKitTests" */;
-			buildPhases = (
-				B277AEF81BD9B5D90036AF3E /* Sources */,
-				B277AEF91BD9B5D90036AF3E /* Frameworks */,
-				B277AEFA1BD9B5D90036AF3E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B277AEFE1BD9B5D90036AF3E /* PBXTargetDependency */,
-			);
-			name = ALKitTests;
-			productName = ALKitTests;
-			productReference = B277AEFC1BD9B5D90036AF3E /* ALKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B277AF061BD9B5D90036AF3E /* ALKitUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B277AF161BD9B5D90036AF3E /* Build configuration list for PBXNativeTarget "ALKitUITests" */;
-			buildPhases = (
-				B277AF031BD9B5D90036AF3E /* Sources */,
-				B277AF041BD9B5D90036AF3E /* Frameworks */,
-				B277AF051BD9B5D90036AF3E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B277AF091BD9B5D90036AF3E /* PBXTargetDependency */,
-			);
-			name = ALKitUITests;
-			productName = ALKitUITests;
-			productReference = B277AF071BD9B5D90036AF3E /* ALKitUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,14 +109,6 @@
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 77Y3N48SNF;
 						LastSwiftMigration = 0900;
-					};
-					B277AEFB1BD9B5D90036AF3E = {
-						CreatedOnToolsVersion = 7.1;
-						TestTargetID = B277AEE71BD9B5D90036AF3E;
-					};
-					B277AF061BD9B5D90036AF3E = {
-						CreatedOnToolsVersion = 7.1;
-						TestTargetID = B277AEE71BD9B5D90036AF3E;
 					};
 				};
 			};
@@ -247,8 +126,6 @@
 			projectRoot = "";
 			targets = (
 				B277AEE71BD9B5D90036AF3E /* ALKit */,
-				B277AEFB1BD9B5D90036AF3E /* ALKitTests */,
-				B277AF061BD9B5D90036AF3E /* ALKitUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -264,20 +141,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B277AEFA1BD9B5D90036AF3E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B277AF051BD9B5D90036AF3E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -285,42 +148,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2411654216393D600EED3E9 /* ViewController.swift in Sources */,
 				B277AF251BD9B60D0036AF3E /* AppDelegate.swift in Sources */,
-				B277AF241BD9B60D0036AF3E /* ViewController.swift in Sources */,
-				B277AF2B1BD9B61B0036AF3E /* ALKit.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B277AEF81BD9B5D90036AF3E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B277AF011BD9B5D90036AF3E /* ALKitTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B277AF031BD9B5D90036AF3E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B277AF0C1BD9B5D90036AF3E /* ALKitUITests.swift in Sources */,
+				B2411652216393C100EED3E9 /* ALKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B277AEFE1BD9B5D90036AF3E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B277AEE71BD9B5D90036AF3E /* ALKit */;
-			targetProxy = B277AEFD1BD9B5D90036AF3E /* PBXContainerItemProxy */;
-		};
-		B277AF091BD9B5D90036AF3E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B277AEE71BD9B5D90036AF3E /* ALKit */;
-			targetProxy = B277AF081BD9B5D90036AF3E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B277AF1F1BD9B60D0036AF3E /* LaunchScreen.storyboard */ = {
@@ -476,54 +310,6 @@
 			};
 			name = Release;
 		};
-		B277AF141BD9B5D90036AF3E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ALKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.prototapp.ALKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ALKit.app/ALKit";
-			};
-			name = Debug;
-		};
-		B277AF151BD9B5D90036AF3E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ALKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.prototapp.ALKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ALKit.app/ALKit";
-			};
-			name = Release;
-		};
-		B277AF171BD9B5D90036AF3E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ALKitUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.prototapp.ALKitUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ALKit;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		B277AF181BD9B5D90036AF3E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ALKitUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.prototapp.ALKitUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ALKit;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -541,24 +327,6 @@
 			buildConfigurations = (
 				B277AF111BD9B5D90036AF3E /* Debug */,
 				B277AF121BD9B5D90036AF3E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B277AF131BD9B5D90036AF3E /* Build configuration list for PBXNativeTarget "ALKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B277AF141BD9B5D90036AF3E /* Debug */,
-				B277AF151BD9B5D90036AF3E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B277AF161BD9B5D90036AF3E /* Build configuration list for PBXNativeTarget "ALKitUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B277AF171BD9B5D90036AF3E /* Debug */,
-				B277AF181BD9B5D90036AF3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
