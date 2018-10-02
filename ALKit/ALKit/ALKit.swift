@@ -14,6 +14,7 @@ public extension UIEdgeInsets {
 
   /// Equal insets for all edges.
   public init(inset: CGFloat) {
+    self.init()
     top = inset
     bottom = inset
     left = inset
@@ -31,8 +32,8 @@ public extension UIView{
   ///   - ofView: The view to be pinned.
   ///   - withInset: Space between pinning edges.
   public func pin(
-    edge: NSLayoutAttribute,
-    toEdge: NSLayoutAttribute,
+    edge: NSLayoutConstraint.Attribute,
+    toEdge: NSLayoutConstraint.Attribute,
     ofView: UIView?,
     withInset: CGFloat = 0) {
       guard let view = superview else {

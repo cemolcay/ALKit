@@ -6,7 +6,7 @@ Easy to use AutoLayout wrapper around `NSLayoutConstraints`.
 Requirements
 ---
 
-- Swift 3.0+
+- Swift 4.2+
 - iOS 8.0+
 - tvOS 9.0+
 

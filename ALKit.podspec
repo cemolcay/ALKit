@@ -16,9 +16,9 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ALKit"
-  s.version      = "0.5"
+  s.version      = "0.6"
   s.summary      = "Easy to use AutoLayout wrapper around `NSLayoutConstraints`."
-
+  s.swift_version = "4.2"
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
@@ -33,7 +33,7 @@ Easy to use AutoLayout wrapper around `NSLayoutConstraints`.
 Requirements
 ---
 
-- Swift 3.0+
+- Swift 4.2+
 - iOS 8.0+
 - tvOS 9.0+
 
